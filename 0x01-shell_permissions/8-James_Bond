@@ -1,6 +1,2 @@
 #!/bin/bash
-(
-chmod u=r hello
-chmod g=r hello
-chmod o=rx hello
-)
+chmod ug=r & o=rx hellow
