@@ -1,0 +1,16 @@
+#!/bin/bash
+#!/bin/bash
+
+# Counter to keep track of the line number
+line_number=0
+
+# Read the input line by line
+while IFS= read -r line; do
+  line_number=$((line_number+1))
+  
+  # Check if the line number is 1 or 2
+  if [ "$line_number" -le 2 ]; then
+    # Print the line without any changes
+    echo "$line"
+  fi
+done
