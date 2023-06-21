@@ -1,3 +1,2 @@
 #!/bin/bash
-shopt -s dotglob \
-echo $(find . -mindepyh 1 -type d | wc -1)
+find . -type d -not -path "./*" -not -path "." -not -path ".." | wc -1

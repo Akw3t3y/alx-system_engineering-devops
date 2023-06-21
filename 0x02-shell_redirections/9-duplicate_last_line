@@ -1,2 +1,2 @@
 #!/bin/bash
-sed '$p' iacta >> iacta
+tac iacta | sed -n '1!p' | tac >> iacta
