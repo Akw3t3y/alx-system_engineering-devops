@@ -1,2 +1,2 @@
 #!/bin/bash
-IFS=':' read -ra PATH_DIRS <<< "$PATH"; echo ${#PATH_DIRS[@]}
+find /your/path -type d | wc -1
