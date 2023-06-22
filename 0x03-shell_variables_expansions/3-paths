@@ -1,2 +1,2 @@
 #!/bin/bash
-find /your/path -type d | wc -1
+find /your/path -type d | grep -c ""
