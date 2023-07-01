@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "./, ../, $(ls -1d * | LC_ALL=C.UTF-8 sort -df | paste -sd ', ' -)"
+echo -n "./, ../, $(ls -1d * | LC_ALL=C.UTF-8 sort -df | paste -sd ', ' -)"
