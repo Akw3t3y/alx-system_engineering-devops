@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$(printf '%s\n' . .. * | LC_ALL=C.UTF-8 sort -df | sed -z 's/\n/, /g' | sed 's/, $/\n/')"
+echo "./, ../, $(ls -1d * | LC_ALL=C.UTF-8 sort -df | paste -sd ', ' -)"
