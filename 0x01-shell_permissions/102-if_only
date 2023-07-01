@@ -1,4 +1,8 @@
 #!/bin/bash
-if [ "$(stat -c '%U' hello)" = "guillaume" ] \
-       then chown betty hello
-   fi
+check_owner() {
+    if [ "$(stat -c "%U" hello)" = "guillaume" ]; then
+        sudo chown betty:hello hello
+    fi
+}
+
+check_owner
