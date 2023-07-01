@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -pa | awk 'BEGIN{ORS=", "} /^\.\.\/?$/{print; next} {print}'
+echo "$(printf '%s\n' . .. * | LC_ALL=C.UTF-8 sort -df | paste -sd ',' -)"
